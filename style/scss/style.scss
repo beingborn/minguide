@@ -1,0 +1,81 @@
+@import 'settings.scss';
+@import 'layout.scss';
+@import 'component.scss';
+
+.scss-study {
+    @include displayFlex();
+    @include border(#eee);
+    background: $blue-color;
+    color: $white-color;
+    > a {
+        text-align: center;
+        text-decoration: none;
+        &:hover {background: $yellow-color;} 
+    }
+}
+/* special width */
+.w-120 {@include widthSetting(100%)}
+.w-110 {@include widthSetting(90%)}
+.w-0 {@include widthSetting(80%)}
+.w-550 {@include widthSetting(70%)}
+/* width setting */
+/* height setting */
+@for $i from 1 to 10 {
+    .w-#{10 * $i}{@include widthSetting(#{10% * $i})}
+}
+/* margin setting */
+@for $i from 1 to 10 {
+    .mt-#{10 * $i}{margin-top: #{10px * $i};}
+    .mb-#{10 * $i}{margin-bottom: #{10px * $i};}
+    .ml-#{10 * $i}{margin-left: #{10px * $i};}
+    .mr-#{10 * $i}{margin-right: #{10px * $i};}
+}
+
+/* h 1,2,3,4 */
+@for $i from 1 through 4 {
+    .item#{$i}{
+        width: #{10% * $i};
+        display: inline-block;
+    }
+}
+
+
+/* header-ico */
+@each $var in const , let , jquery {
+    .ico-#{$var}{
+        background-image: url(../images/#{$var}.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+
+/* ico-after, before style */
+/* ico-before */
+@each $var in 16, 20 , 24 {
+    .ico-before-#{$var}::before{width: #{$var}px; height: #{$var}px; background-position: center; background-repeat: no-repeat;}
+}
+/* ico-after */
+@each $var in 16, 20 , 24 {
+    .ico-after-#{$var}::after{width: #{$var}px; height: #{$var}px; background-position: center; background-repeat: no-repeat; background-size: #{$var}px #{$var}px;}
+}
+
+$heading : (
+    h1 : 30px,
+    h2 : 20px,
+    h3 : 18px,
+);
+
+@each $ele,$fs in $heading {
+    #{$ele} {
+        font-size: $fs;
+    }
+}
+
+/* reset styles */
+html, body {height: 100%; margin: 0; padding: 0;}
+
+/* table */
+table {table-layout: fixed; border-collapse: collapse; width: 100%;}
+caption {display: none;}
+a {text-decoration: none; color: $black-color;}

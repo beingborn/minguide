@@ -1,0 +1,25 @@
+/* variables */
+$blue-color : #003675;
+$black-color: #1f1f1f;
+$white-color : #fff;
+$gray-color-00 : #d8d8d8;
+$gray-color-01 : #a7a7a7;
+$gray-00: #eee;
+$yellow-color : yellow;
+$example-txt : bx;
+
+/* mixin */
+@mixin widthSetting($percent) {
+    width: $percent;
+}
+
+@mixin border($color) {
+    border: 1px solid $color;
+}
+
+@mixin displayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

@@ -1,0 +1,22 @@
+@import 'settings.scss';
+/* layout */
+.ly-inner {margin: 0px auto; max-width: 1280px}
+
+/* header */
+.header > ul {
+    @include displayFlex();
+    background: $gray-00;
+    li > a {
+        color: #000;
+        &.is-active {
+            color: blue;
+        }
+    }
+}
+
+.guide-body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: #eee;
+}

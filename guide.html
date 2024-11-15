@@ -1,0 +1,103 @@
+<!-- 
+	파일명	: guide.html
+	-------------------------------------------------
+	Dec. 가이드
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-09-28
+	수정내용	: 최초작성
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가이드 HTML</title>
+    <link rel="stylesheet" href="./style/css/style.css">
+    <!-- jquery inject -->
+    <script src="vendors/jquery-3.7.1.js"></script>
+</head>
+<body class="guide-body">
+    <!-- tab 1 -->
+    <div class="ly-inner tabContent">
+        <!-- 스타일 가이드 탭 버튼 -->
+        <div class="guide-tab">
+            <div class="guide-tab-inner">
+                <div class="guide-inner" style="width: 100%;">
+                    <button type="button" class="guide-tabLink">엘리먼트 모듈</button>
+                    <button type="button" class="guide-tabLink">블록 모듈</button>
+                    <button type="button" class="guide-tabLink">레이아웃 모듈</button>
+                    <button type="button" class="guide-tabLink">컬러 및 변수</button>
+                </div>
+            </div>
+        </div>
+        <!-- ./ 스타일 가이드 탭 버튼 -->
+        <table class="bl-vertical-list mt-40">
+            <caption>테이블 리스트</caption>
+            <colgroup>
+                <col>
+                <col style="width: 24%;">
+                <col style="width: 120px;">
+                <col style="width: 100px;">
+                <col style="width: 20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">이름</th>
+                    <th scope="col">파일명(URL)</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">작업자</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="txt-l"><a target="_blank" href="./sub/comp/tab-hash.html">탭 메뉴 $(hash)적용</a></td>
+                    <td class="txt-l"><a target="_blank" class="guide-msg" href="./sub/tab-hash.html">탭 메뉴 $(hash)적용</a></td>
+                    <td class="txt-c">2024.10.16</td>
+                    <td class="txt-c">이민혁</td>
+                    <td class="txt-c">공지사항 리스트 사용</td>
+                </tr>
+                <tr>
+                    <td class="txt-l"><a target="_blank" href="module/module-table.html">브레드크럼브</a></td>
+                    <td class="txt-l"><a target="_blank" class="guide-msg" href="module/module-breadcrumb.html">module-breadcrumb.html</a></td>
+                    <td class="txt-c">2024.10.16</td>
+                    <td class="txt-c">이민혁</td>
+                    <td class="txt-c">모든 페이지 공통 사용</td>
+                </tr>
+                <tr>
+                    <td class="txt-l"><a target="_blank" href="module/module-step-wrap.html">단계표시기</a></td>
+                    <td class="txt-l"><a target="_blank" class="guide-msg" href="module/module-step-wrap.html">module-step-wrap.html</a></td>
+                    <td class="txt-c">2024.10.16</td>
+                    <td class="txt-c">이민혁</td>
+                    <td class="txt-c"></td>
+                </tr>
+                <tr>
+                    <td class="txt-l"><a target="_blank" href="module/module-rowTable-00.html">가로형 테이블</a></td>
+                    <td class="txt-l"><a target="_blank" class="guide-msg" href="module/module-rowTable-00.html">module-rowTable-00.html</a></td>
+                    <td class="txt-c">2024.10.16</td>
+                    <td class="txt-c">이민혁</td>
+                    <td class="txt-c"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- ./ tab 1 -->
+    <script>
+        /** 함수명	: 
+            용도    : 가이드 관련 탭 콘텐츠 전환
+            설명    : 탭 클릭 시 해당 컨텐츠만 show하고 버튼 활성화
+        */
+        $('.tabContent').hide()
+        $('.tabContent').eq(0).show();
+        $('.guide-tab-inner button').eq(0).addClass('is-active')
+        $('.guide-tab-inner button').on('click', function(){
+            let tabIndex = $(this).index();
+            $('.tabContent').hide()
+            $('.tabContent').eq(tabIndex).show();
+            $('.guide-tab-inner button').removeClass('is-active')
+            $(this).addClass('is-active')
+        })
+    </script>
+</body>
+</html>

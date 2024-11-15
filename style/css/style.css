@@ -1,0 +1,386 @@
+@charset "UTF-8";
+/* variables */
+/* mixin */
+/* variables */
+/* mixin */
+/* layout */
+.ly-inner {
+  margin: 0px auto;
+  max-width: 1280px;
+}
+
+/* header */
+.header > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+.header > ul li > a {
+  color: #000;
+}
+.header > ul li > a.is-active {
+  color: blue;
+}
+
+.guide-body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #eee;
+}
+
+/* variables */
+/* mixin */
+/* 세로형 테이블 */
+.bl-vertical-list tr {
+  border-top: 1px solid #a7a7a7;
+}
+.bl-vertical-list thead th {
+  padding: 15px;
+  background: #d8d8d8;
+  color: #1f1f1f;
+}
+.bl-vertical-list tbody td {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.scss-study {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  background: #003675;
+  color: #fff;
+}
+.scss-study > a {
+  text-align: center;
+  text-decoration: none;
+}
+.scss-study > a:hover {
+  background: yellow;
+}
+
+/* special width */
+.w-120 {
+  width: 100%;
+}
+
+.w-110 {
+  width: 90%;
+}
+
+.w-0 {
+  width: 80%;
+}
+
+.w-550 {
+  width: 70%;
+}
+
+/* width setting */
+/* height setting */
+.w-10 {
+  width: 10%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+/* margin setting */
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.ml-40 {
+  margin-left: 40px;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.ml-50 {
+  margin-left: 50px;
+}
+
+.mr-50 {
+  margin-right: 50px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.ml-60 {
+  margin-left: 60px;
+}
+
+.mr-60 {
+  margin-right: 60px;
+}
+
+.mt-70 {
+  margin-top: 70px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+
+.ml-70 {
+  margin-left: 70px;
+}
+
+.mr-70 {
+  margin-right: 70px;
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.ml-80 {
+  margin-left: 80px;
+}
+
+.mr-80 {
+  margin-right: 80px;
+}
+
+.mt-90 {
+  margin-top: 90px;
+}
+
+.mb-90 {
+  margin-bottom: 90px;
+}
+
+.ml-90 {
+  margin-left: 90px;
+}
+
+.mr-90 {
+  margin-right: 90px;
+}
+
+/* h 1,2,3,4 */
+.item1 {
+  width: 10%;
+  display: inline-block;
+}
+
+.item2 {
+  width: 20%;
+  display: inline-block;
+}
+
+.item3 {
+  width: 30%;
+  display: inline-block;
+}
+
+.item4 {
+  width: 40%;
+  display: inline-block;
+}
+
+/* header-ico */
+.ico-const {
+  background-image: url(../images/const.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico-let {
+  background-image: url(../images/let.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico-jquery {
+  background-image: url(../images/jquery.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ico-after, before style */
+/* ico-before */
+.ico-before-16::before {
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico-before-20::before {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ico-before-24::before {
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ico-after */
+.ico-after-16::after {
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+.ico-after-20::after {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+.ico-after-24::after {
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/* reset styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* table */
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+caption {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+}
